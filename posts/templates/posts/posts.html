@@ -1,0 +1,8 @@
+{% extends "announcements/header.html" %}
+
+{% block content %}
+  {% for post in object_list %}
+    <h5>{{ post.date|date:"Y-m-d" }}</h5><h2><a href="/posts/{{post.id}}">
+    {{post.title}}</a></h2>
+  {% endfor %}
+{% endblock %}
